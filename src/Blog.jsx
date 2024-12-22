@@ -1,6 +1,7 @@
+import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
-import './Blog.css';
+import "./Blog.css";
 
 const Blog = () => {
   const [blogs, setBlogs] = useState([]);
@@ -36,10 +37,10 @@ const Blog = () => {
                 />
               )}
               <h3 className="blog-title">{blog.title}</h3>
-              <div
-                className="blog-content"
-                dangerouslySetInnerHTML={{ __html: blog.content }}
-              ></div>
+              <p className="blog-excerpt">{blog.content.slice(0, 100)}...</p>
+              <Link to={`/blog/${blog.id}`}>
+                <button className="btn btn-outline-secondary">Read More</button>
+              </Link>
             </div>
           ))}
         </div>

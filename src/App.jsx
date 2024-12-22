@@ -1,15 +1,20 @@
-
-import './App.css'
-import Blog from './Blog'
-import Nav from './Nav'
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import "./App.css";
+import Blog from "./Blog";
+import Nav from "./Nav";
+import SingleBlog from "./SingleBlog";
 
 const App = () => {
-  return(
-    <div>
+  return (
+    <Router>
       <Nav></Nav>
-      <Blog></Blog>
-    </div>
-  );
-}
+      <Routes>
+        <Route path="/" element={<Blog />} />
+        <Route path="/blog/:id" element={<SingleBlog />} />
+      </Routes>
+    </Router>
 
-export default App
+  );
+};
+
+export default App;
