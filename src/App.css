@@ -1,0 +1,24 @@
+.blog-card{
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.blog-card h2{
+    font-size: 1.5em;
+    color: #333;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.blog-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.blog-card p{
+    font-family: 'Montserrat', sans-serif;
+    padding: 5px;
+}
